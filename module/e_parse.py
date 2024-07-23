@@ -54,7 +54,7 @@ async def ep(_, msg: Message):
     if not e_cfg.download and e_cfg.destroy_regularly:
         await destroy_regularly(msg.text)
 
-    await msg.reply_document(erp.json_path, quote=True, reply_markup=btn)
+    await msg.reply_document(erp.json_path, quote=True, reply_markup=btn,caption="JSON为画廊元数据,下载请点击按钮")
     await m.delete()
 
     uc = parse_count.get_counter(msg.from_user.id)
