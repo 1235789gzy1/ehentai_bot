@@ -4,7 +4,7 @@ from pyrogram.types import Message
 
 @Client.on_message(filters.command("start"))
 async def start(_, msg: Message):
-    await msg.reply("请发送画廊链接,不支持单图链接,\n归档链接 2 小时后自动销毁，生成后请尽快下载 \n速率限制以提示为准")
+    await msg.reply("请发送画廊链接,不支持单图链接,\n归档链接 2 小时后自动销毁，生成后请尽快下载 \n下载请点击按钮,json为画廊元数据 \n速率限制以提示为准")
 
 
 @Client.on_message(filters.command("help"))
